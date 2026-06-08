@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db"
 import { UploadForm } from "@/components/upload-form"
 import { ScoreHero } from "@/components/score-hero"
 import { UploadHistory } from "@/components/upload-history"
+import { LogoutButton } from "@/components/logout-button"
 
 export default async function DashboardPage() {
   const cookieStore = await cookies()
@@ -26,6 +27,7 @@ export default async function DashboardPage() {
           <h1 className="text-2xl font-bold">Welcome, {user.name}</h1>
           <p className="text-muted-foreground">Upload a photo to get your smile score</p>
         </div>
+        <LogoutButton />
       </div>
 
       <UploadForm />

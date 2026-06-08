@@ -37,3 +37,9 @@ export async function register(
 
   redirect("/dashboard")
 }
+
+export async function logout() {
+  const cookieStore = await cookies()
+  cookieStore.delete("userId")
+  redirect("/register")
+}
