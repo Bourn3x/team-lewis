@@ -7,6 +7,7 @@ export default defineConfig({
     environment: "node",
     globalSetup: "./tests/global-setup.ts",
     setupFiles: ["./tests/setup.ts"],
+    exclude: ["e2e/**", "node_modules/**"],
     env: {
       DATABASE_URL: "file:./prisma/test.db",
     },
