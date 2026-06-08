@@ -9,7 +9,7 @@ const MAX_SIZE = 5 * 1024 * 1024 // 5MB
 export async function POST(request: Request) {
   // Auth check
   const cookieStore = await cookies()
-  const session = cookieStore.get("session")
+  const session = cookieStore.get("userId")
   if (!session?.value) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   }
@@ -44,11 +44,15 @@ export async function POST(request: Request) {
     )
   }
 
+  // Convert File to Buffer for services
+  const arrayBuffer = await image.arrayBuffer()
+  const buffer = Buffer.from(arrayBuffer)
+
   // Store file
-  const filename = await fileService.store(image)
+  const filename = await fileService.store(image.name, buffer)
 
   // Score the image
-  const score = await scoreProvider.score(image)
+  const score = await scoreProvider.score(buffer)
 
   // Save to DB
   const upload = await prisma.upload.create({
