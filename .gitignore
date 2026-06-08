@@ -34,3 +34,14 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Uploads
+uploads/
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+
+# Playwright
+test-results/
+playwright-report/
