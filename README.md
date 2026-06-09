@@ -6,6 +6,7 @@ A Next.js web application that lets users register, upload images, and receive a
 
 ```bash
 npm install
+cp .env.example .env
 npx prisma generate
 npx prisma db push
 npm run dev
