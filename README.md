@@ -2,6 +2,8 @@
 
 A Next.js web application that lets users register, upload images, and receive a "smile score."
 
+> Press `d` to toggle between light and dark mode.
+
 ## Quick Start
 
 ```bash
