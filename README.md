@@ -36,8 +36,8 @@ services/       Business logic (ScoreProvider, FileService)
 components/     UI components (shadcn/ui based)
 lib/            Shared utilities, DB client, service composition
 prisma/         Database schema
-tests/          Unit and integration tests
-e2e/            Playwright end-to-end tests
+tests/          Unit, integration, and E2E tests
+  tests/e2e/    Playwright end-to-end tests
 ```
 
 ### Key Design Decisions

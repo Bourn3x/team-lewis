@@ -19,7 +19,7 @@ test.describe("Smile Score App", () => {
     await expect(page.getByRole("heading", { name: "Welcome, Test User" })).toBeVisible()
 
     // 4. Upload an image
-    const filePath = path.resolve("e2e/fixtures/test-image.jpg")
+    const filePath = path.resolve("tests/e2e/fixtures/test-image.jpg")
     await page.locator('input[type="file"]').setInputFiles(filePath)
     await page.click('button:has-text("Get Smile Score")')
 

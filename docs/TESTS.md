@@ -99,11 +99,11 @@ Tests the `POST /api/uploads` route handler directly. Mocks `next/headers` (cook
 
 ## End-to-End Tests
 
-### `e2e/smile-score.spec.ts` — Full Application Flow
+### `tests/e2e/smile-score.spec.ts` — Full Application Flow
 
 Playwright browser tests that exercise the complete user journey. The dev server is started automatically before tests run (configured in `playwright.config.ts`).
 
-**Fixtures:** `e2e/fixtures/test-image.jpg` — a test image used for upload tests.
+**Fixtures:** `tests/e2e/fixtures/test-image.jpg` — a test image used for upload tests.
 
 | Test | What it verifies |
 |------|-----------------|
